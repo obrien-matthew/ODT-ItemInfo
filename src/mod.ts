@@ -513,11 +513,11 @@ class ItemInfo implements IPostDBLoadMod {
 				// item._props.ExaminedByDefault = true // DEBUG!!!
 
 				// BSG Blacklist generator
-				if (item._props.CanSellOnRagfair == false){
-					// log(itemID)
-					// log(this.getItemName(itemID, userLocale))
-					log(`"${itemID}", // ${this.getItemName(itemID, "en")}`)
-				}
+				// if (item._props.CanSellOnRagfair == false){
+				// 	// log(itemID)
+				// 	// log(this.getItemName(itemID, userLocale))
+				// 	log(`"${itemID}", // ${this.getItemName(itemID, "en")}`)
+				// }
 
 				const i18n = translations[userLocale]
 				// boilerplate defaults
