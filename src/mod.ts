@@ -1273,12 +1273,12 @@ class ItemInfo implements IPostDBLoadMod {
 
 			const questConditions = this.quests[questID].conditions.AvailableForFinish
 			for (const condition of questConditions) {
-				if (condition._parent == "HandoverItem" && condition._props.target[0] == itemID) {
+				if (condition.conditionType == "HandoverItem" && condition.target.includes(itemID)) {
 					const trader = this.quests[questID].traderId
 					//let tradeName = tables.traders[trader].base.nickname
 					const traderName = this.locales[locale][`${trader} Nickname`]
 					// prettier-ignore
-					questString += `${translations[locale].Found} ${condition._props.onlyFoundInRaid ? "(✔) " : ""}×${condition._props.value} > ${questName} @ ${traderName}\n`
+					questString += `${translations[locale].Found} ${condition.onlyFoundInRaid ? "(✔) " : ""}×${condition.value} > ${questName} @ ${traderName}\n`
 				}
 			}
 		}
