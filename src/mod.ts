@@ -901,8 +901,10 @@ class ItemInfo implements IPostDBLoadMod {
 			return this.locales[locale][`${itemID} Name`]
 		} else if (typeof this.locales["en"][`${itemID} Name`] != "undefined") {
 			return this.locales["en"][`${itemID} Name`]
-		} else {
+		} else if (typeof this.items[itemID]?._props?.Name != "undefined"){
 			return this.items[itemID]._props.Name // If THIS fails, the modmaker REALLY fucked up
+		} else {
+			return
 		}
 	}
 
@@ -1052,8 +1054,10 @@ class ItemInfo implements IPostDBLoadMod {
 		if (typeof this.fleaPrices[itemID] != "undefined") {
 			// Forgot quotes, typeof returns string..
 			return this.fleaPrices[itemID]
-		} else {
+		} else if (typeof this.getItemInHandbook(itemID)?.Price != "undefined"){
 			return this.getItemInHandbook(itemID).Price
+		} else {
+			return 0;
 		}
 	}
 
