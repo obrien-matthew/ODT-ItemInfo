@@ -8,7 +8,7 @@
 		"_example": "Flea price: 61703₽ | Ragman's valuation: 37386₽",
 		"enabled": true,
 		"addFleaPrice": true,
-		"addItemValue": false
+		"addItemValue": true
 	},
 	"RarityRecolor": {
 		"_description": "This feature clears and changes background color on EVERY item in the game based on MMO style rarity tier-list with colors that make actual sense. Tiers are based on trader level you can purchase or barter the item. Barters are considered +1 rarity level. If item is unbuyable, calculates rarity based on item in-game per-slot value and uses thresholds set in tiers config. Banned on flea market items are given highest rarity - overpowered. The tier list: Common (grey background, bought with level 1 traders OR under 10k) > Rare (blue, level 2 trades for currency and level 1 barters OR under 20k) > Epic (purple, level 3 and level 2 barters OR under 30k) > Legendary (dim yellow, level 4 and level 3 barters OR under 40k) > Uber (bright yellow, level 4 barters only OR under 60k) > UNOBTAINIUM (bright green, super valuable items worth over 60k per slot) > OP (bright red, banned on flea market) > CUSTOM (dim red, not used by default). Works for 95% of items well enough to be very much usable. Can add tier name to PricesInfo module.",

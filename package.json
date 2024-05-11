@@ -1,19 +1,18 @@
 {
-	"name": "ItemInfo",
-	"version": "4.0.3",
-	"main": "src/mod.js",
-	"license": "MIT",
-	"author": "ODT",
+    "name": "ItemInfo",
+    "version": "4.0.3",
+    "main": "src/mod.js",
+    "license": "MIT",
+    "author": "ODT,hazmatt",
     "akiVersion": "~3.8",
-	"loadBefore": [],
-	"loadAfter": [],
-	"incompatibilities": [],
-	"contributors": [],
-	"isBundleMod": false,
+    "loadBefore": [],
+    "loadAfter": [],
+    "incompatibilities": [],
+    "contributors": [],
+    "isBundleMod": false,
     "scripts": {
         "setup": "npm i",
-        "build": "node ./build.mjs",
-        "buildinfo": "node ./build.mjs --verbose"
+        "build": "node ./packageBuild.ts"
     },
     "devDependencies": {
         "@types/node": "20.11",

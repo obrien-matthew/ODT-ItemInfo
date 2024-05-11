@@ -1,17 +1,39 @@
 {
-	"COMMON": "default",
-	"RARE": "blue",
-	"EPIC": "violet",
-	"LEGENDARY": "yellow",
-	"UBER": "tracerYellow",
-	"UNOBTAINIUM": "tracerGreen",
-	"OVERPOWERED": "tracerRed",
-	"CUSTOM": "red",
-	"CUSTOM2": "orange",
-	"UNKNOWN": "green",
-	"COMMON_VALUE_FALLBACK": "9999",
-	"RARE_VALUE_FALLBACK": "19999",
-	"EPIC_VALUE_FALLBACK": "29999",
-	"LEGENDARY_VALUE_FALLBACK": "39999",
-	"UBER_VALUE_FALLBACK": "59999"
+	"priceThresholds": {
+		"key": [
+			8000000,
+			1000000,
+			400000,
+			100000,
+			30000,
+			15000
+		],
+		"itemPerSlot": [
+			300000,
+			150000,
+			85000,
+			50000,
+			20000,
+			7500
+		]
+	},
+	"nameCodes": [
+		"XX",
+		"X",
+		"0",
+		"1",
+		"2",
+		"3",
+		"4"
+	],
+	"backgroundColors": [
+		"#ff00ff",
+		"#a60000",
+		"#cf7b27",
+		"#58ad4e",
+		"#56827d",
+		"#424254",
+		"#000000"
+	],
+	"undefinedColor": "#75ff6b"
 }
