@@ -219,19 +219,19 @@ class ItemInfo implements IPostDBLoadMod {
 				let fleaPrice = Math.round(this.getFleaPrice(itemID))
 				const itemBestVendor = this.getItemBestTrader(itemID, userLocale)
 				let traderPrice = Math.round(itemBestVendor.price)
-				const traderName = item
+				const traderName = itemBestVendor.name
 
 				const itemSlots = item._props.Width * item._props.Height
 
-				if (!isAmmo && !isKey) {
-					// var dict = {
-					// 	id : item._id,
-					// 	trader : traderPrice,
-					// 	flea : fleaPrice
-					// }
-					// itemPrices.push(dict)
-					itemPrices += `${item._id},${item._props.Name},${traderPrice},${fleaPrice},${item._props.Weight},${itemSlots},${item._props.StackMaxSize}\n`
-				}
+				// if (!isAmmo && !isKey) {
+				// 	// var dict = {
+				// 	// 	id : item._id,
+				// 	// 	trader : traderPrice,
+				// 	// 	flea : fleaPrice
+				// 	// }
+				// 	// itemPrices.push(dict)
+				// 	itemPrices += `${item._id},${item._props.Name},${traderPrice},${fleaPrice},${item._props.Weight},${itemSlots},${item._props.StackMaxSize}\n`
+				// }
 
 				let spawnChance = 10 // DEGUG
 
@@ -264,9 +264,9 @@ class ItemInfo implements IPostDBLoadMod {
 					itemFleaValuePerSlot = itemFleaValuePerSlot / itemSlots
 				}
 
-				// weightDenominator = Math.max(item._props.Weight, 0.001) * item._props.StackMaxSize
-				// itemTraderValuePerSlotPerKg = Math.round(itemTraderValuePerSlot / weightDenominator)
-				// itemFleaValuePerSlotPerKg = Math.round(itemFleaValuePerSlot / weightDenominator)
+				weightDenominator = Math.max(item._props.Weight, 0.001) * item._props.StackMaxSize
+				itemTraderValuePerSlotPerKg = Math.round(itemTraderValuePerSlot / weightDenominator)
+				itemFleaValuePerSlotPerKg = Math.round(itemFleaValuePerSlot / weightDenominator)
 
 				// if (item._props.Weight < weightMinThreshold) {
 				// 	weightDenominator = weightMinThreshold * item._props.StackMaxSize
@@ -582,7 +582,7 @@ class ItemInfo implements IPostDBLoadMod {
 				}
 			}
 		}
-		writeFileSync("itemPrices.csv", itemPrices)
+		// writeFileSync("itemPrices.csv", itemPrices)
 		this.logger.success("[Item Info] Finished processing items, enjoy!")
 		if (translations.debug.enabled) {
 			const debugItemIDlist = [
