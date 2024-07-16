@@ -1,36 +1,32 @@
 import { DependencyContainer } from "tsyringe";
-import { writeFileSync } from "fs";
-import { ConfigTypes } from "@spt-aki/models/enums/ConfigTypes";
-import { IPostDBLoadMod } from "@spt-aki/models/external/IPostDBLoadMod";
-import { IHideoutConfig } from "@spt-aki/models/spt/config/IHideoutConfig";
-import { IRagfairConfig } from "@spt-aki/models/spt/config/IRagfairConfig";
-import { LogBackgroundColor } from "@spt-aki/models/spt/logging/LogBackgroundColor";
-import { LogTextColor } from "@spt-aki/models/spt/logging/LogTextColor";
-import { ILogger } from "@spt-aki/models/spt/utils/ILogger";
-import { ConfigServer } from "@spt-aki/servers/ConfigServer";
-import { DatabaseServer } from "@spt-aki/servers/DatabaseServer";
-import { ItemBaseClassService } from "@spt-aki/services/ItemBaseClassService";
-import { ITemplateItem } from "@spt-aki/models/eft/common/tables/ITemplateItem";
+
+import { ConfigTypes } from "@spt/models/enums/ConfigTypes";
+import { IPostDBLoadMod } from "@spt/models/external/IPostDBLoadMod";
+import { IHideoutConfig } from "@spt/models/spt/config/IHideoutConfig";
+import { IRagfairConfig } from "@spt/models/spt/config/IRagfairConfig";
+import { LogBackgroundColor } from "@spt/models/spt/logging/LogBackgroundColor";
+import { LogTextColor } from "@spt/models/spt/logging/LogTextColor";
+import { ILogger } from "@spt/models/spt/utils/ILogger";
+import { ConfigServer } from "@spt/servers/ConfigServer";
+import { DatabaseServer } from "@spt/servers/DatabaseServer";
+import { ItemBaseClassService } from "@spt/services/ItemBaseClassService";
+import { ITemplateItem } from "@spt/models/eft/common/tables/ITemplateItem";
 import {
   HandbookItem,
   IHandbookBase,
-} from "@spt-aki/models/eft/common/tables/IHandbookBase";
-import { IDatabaseTables } from "@spt-aki/models/spt/server/IDatabaseTables";
-import { IHideoutProduction } from "@spt-aki/models/eft/hideout/IHideoutProduction";
-import { IHideoutArea } from "@spt-aki/models/eft/hideout/IHideoutArea";
-import { IQuest } from "@spt-aki/models/eft/common/tables/IQuest";
-import { IArmorMaterials } from "@spt-aki/models/eft/common/IGlobals";
-import {
-  IBarterScheme,
-  ITrader,
-} from "@spt-aki/models/eft/common/tables/ITrader";
-import { Traders } from "@spt-aki/models/enums/Traders";
+} from "@spt/models/eft/common/tables/IHandbookBase";
+import { IDatabaseTables } from "@spt/models/spt/server/IDatabaseTables";
+import { IHideoutProduction } from "@spt/models/eft/hideout/IHideoutProduction";
+import { IHideoutArea } from "@spt/models/eft/hideout/IHideoutArea";
+import { IQuest } from "@spt/models/eft/common/tables/IQuest";
+import { IArmorMaterials } from "@spt/models/eft/common/IGlobals";
+import { IBarterScheme, ITrader } from "@spt/models/eft/common/tables/ITrader";
+import { Traders } from "@spt/models/enums/Traders";
 
 import config from "../config/config.json";
 import tiers from "../config/tiers.json";
-import keys from "../config/keys.json";
 import translations from "./translations.json";
-import { Item } from "@spt-aki/models/eft/common/tables/IItem";
+import { Item } from "@spt/models/eft/common/tables/IItem";
 
 // Using `this.` is perfectly fine. Much better than having ambiguous and typeless variables declared in some global scope
 // Don't worry - there's always opportunities to learn :) - Terkoiz
