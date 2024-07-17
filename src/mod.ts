@@ -24,6 +24,7 @@ import { IBarterScheme, ITrader } from "@spt/models/eft/common/tables/ITrader";
 import { Traders } from "@spt/models/enums/Traders";
 
 import config from "../config/config.json";
+import keys from "../config/keys.json";
 import tiers from "../config/tiers.json";
 import translations from "./translations.json";
 import { Item } from "@spt/models/eft/common/tables/IItem";

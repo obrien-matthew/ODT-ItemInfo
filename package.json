@@ -1,29 +1,15 @@
 {
-<<<<<<< HEAD
     "name": "ItemInfo",
-    "version": "4.0.3",
+    "version": "4.1.0",
     "main": "src/mod.js",
     "license": "MIT",
-    "author": "ODT,hazmatt",
-    "akiVersion": "~3.8",
+    "author": "ODT",
+    "sptVersion": "~3.9",
     "loadBefore": [],
     "loadAfter": [],
     "incompatibilities": [],
     "contributors": [],
     "isBundleMod": false,
-=======
-	"name": "ItemInfo",
-	"version": "4.1.0",
-	"main": "src/mod.js",
-	"license": "MIT",
-	"author": "ODT",
-    "sptVersion": "~3.9",
-	"loadBefore": [],
-	"loadAfter": [],
-	"incompatibilities": [],
-	"contributors": [],
-	"isBundleMod": false,
->>>>>>> a1ba982db497159f7e11ade1e7e81a826414bd18
     "scripts": {
         "setup": "npm i",
         "build": "node ./packageBuild.ts"
